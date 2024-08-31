@@ -7,7 +7,7 @@ const HeaderCom: React.FC = () =>{
                 <Image src="/qr-buddy.png" alt="qr-buddy" width={50} height={50} />
             </div>
             <div className="flex-1 text-center font-semibold text-lg">
-                <h1>QR GENERATOR BUDDY</h1>
+                <h1>QR GENERATOR</h1>
             </div>
             <div className="flex items-center justify-end">
                 <svg width={30} viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
