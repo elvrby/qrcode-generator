@@ -35,7 +35,7 @@ export default function Home() {
             value={url}
             onChange={(e) => setUrl(e.target.value)}
             placeholder="Enter URL"
-            className='p-2 w-2/4 h-10 bg-[#f3f3f3] border border-[#dfdfdf]'
+            className='p-2 w-5/6 h-10 bg-[#f3f3f3] border border-[#dfdfdf] md:w-2/4'
           />
           <span>This is what your QR code will link to.</span>
         </div>
