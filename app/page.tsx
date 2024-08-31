@@ -44,9 +44,21 @@ export default function Home() {
         </button>
 
         {qrCode && (
-          <div style={{ marginTop: '20px' }}>
-            <h2>Your QR Code:</h2>
-            <Image src={qrCode} alt="QR Code" width={200} height={200} />
+          <div className='mt-5 justify-center flex flex-col'>
+            <div>
+              <h2>Your QR Code:</h2>
+              <Image src={qrCode} alt="QR Code" width={200} height={200} />
+            </div>
+            <div>
+              <a 
+                href={qrCode} 
+                download="qr-code.png" 
+                className='w-52 border-2 border-slate-800 text-black p-2 rounded-md mt-4 block text-center text-base hover:bg-slate-800 hover:text-white'
+              >
+                Download QR Code
+              </a>
+            </div>
+
           </div>
         )}
         </div>
