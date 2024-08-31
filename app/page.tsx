@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import HeaderCom from '@/src/components/header';
+import FooterComponent from '@/src/components/footer';
 
 export default function Home() {
   const [url, setUrl] = useState('');
@@ -20,12 +21,11 @@ export default function Home() {
   };
 
   return (
-    <div className='bg-white h-screen text-black'>
-      <div className=''>
+    <div className='bg-white h-screen text-black flex flex-col'>
+
         <HeaderCom></HeaderCom>
-      </div>
-      
-      <div className='w-full items-center justify-center flex'>
+
+      <div className='flex-grow w-full flex justify-center'>
         <div className='mt-5 text-xl w-11/12 2xl:w-8/12'>
         <h1 className='text-3xl font-bold mt-10'>Generate a QR Code</h1>
         <div className='w-full flex flex-col mt-10 text-base'>
@@ -62,6 +62,9 @@ export default function Home() {
           </div>
         )}
         </div>
+      </div>
+      <div>
+          <FooterComponent></FooterComponent>
       </div>
     </div>
   );
