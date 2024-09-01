@@ -36,6 +36,7 @@ const DisplayAddon: React.FC<DisplayComponentProps> = ({ isOpen, onClose }) => {
 
     return (
         <main className={`fixed top-0 right-0 w-full h-full transform lg:-96 ${isOpen ? 'translate-x-0' : 'translate-x-full'} transition-transform duration-300 ease-in-out`}>
+            <div className='2xl:pl-96 2xl:pr-96'>
             <div className="flex items-center justify-between p-4">
                 <button onClick={onClose} >
                     <svg className='ofill' width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -71,6 +72,7 @@ const DisplayAddon: React.FC<DisplayComponentProps> = ({ isOpen, onClose }) => {
                         )}
                     </button>
                 </div>
+            </div>
             </div>
         </main>
     );

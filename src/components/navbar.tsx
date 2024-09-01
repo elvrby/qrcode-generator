@@ -4,6 +4,7 @@ import Cookies from 'js-cookie';
 import Image from 'next/image';
 import DisplayAddon from './addons/display'; 
 import AboutAddon from './addons/about';
+import TermsAddon from './addons/terms';
 
 interface NavbarComponentProps {
   isOpen: boolean;
@@ -13,6 +14,7 @@ interface NavbarComponentProps {
 const NavbarComponent: React.FC<NavbarComponentProps> = ({ isOpen, onClose }) => {
     const [isNavbarOpenDisplay, setIsNavbarOpen] = useState(false);
     const [isNavbarOpenAbout, setIsNavbarOpenAbout] = useState(false);
+    const [isNavbarOpenTerms, setIsNavbarOpenTerms] = useState(false);
 
   const handleToggleNavbar = () => {
     setIsNavbarOpen(!isNavbarOpenDisplay);
@@ -28,6 +30,14 @@ const NavbarComponent: React.FC<NavbarComponentProps> = ({ isOpen, onClose }) =>
 
   const handleCloseNavbarAbout = () => {
     setIsNavbarOpenAbout(false);
+  };
+
+  const handleToggleNavbarTerms = () => {
+    setIsNavbarOpenTerms(!isNavbarOpenDisplay);
+  };
+
+  const handleCloseNavbarTerms = () => {
+    setIsNavbarOpenTerms(false);
   };
 
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
@@ -49,7 +59,9 @@ const NavbarComponent: React.FC<NavbarComponentProps> = ({ isOpen, onClose }) =>
       className={`fixed top-0 right-0 navbar w-full h-full transform lg:-96 ${
         isOpen ? 'translate-x-0' : 'translate-x-full'
       } transition-transform duration-300 ease-in-out`}>
-      <div className="flex items-center justify-between p-4">
+        
+      <div className='2xl:pl-96 2xl:pr-96'>
+      <div className="flex items-center justify-between p-4 ">
         <Image src={'/qr-buddy-icon.png'} alt='' width={60} height={60}></Image>
         <span className='font-bold'>Qr Code Generator</span>
         <button onClick={onClose} className="text-white">
@@ -72,16 +84,16 @@ const NavbarComponent: React.FC<NavbarComponentProps> = ({ isOpen, onClose }) =>
                         <path d="M0.9375 2.77734L3.14551 0.5625L14.0625 11.5L3.14551 22.4375L0.9375 20.2227L9.63965 11.5L0.9375 2.77734Z" fill="#DADADA"/>
                     </svg>
                 </button>
-                <a href="" className='bg-[#4A4A4A] hover:bg-[#535353] w-full p-4 flex items-center justify-between text-white'>
+                <button onClick={handleToggleNavbarTerms} className='bg-[#4A4A4A] hover:bg-[#535353] w-full p-4 flex items-center justify-between text-white'>
                     <svg className='w-5 mr-4' viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M32.0001 23.001C32.0001 19.084 29.4941 15.761 26.0021 14.524V4H24.0021V1.999H26.0021V0H3.00206C2.91806 0.004 2.29406 -0.00799999 1.55606 0.354C0.808055 0.686 -0.0339445 1.645 0.00105545 3C0.00105545 3.006 0.00205545 3.012 0.00205545 3.018V30C0.00205545 32 2.00206 32 2.00206 32H23.0831L23.0761 31.996C28.0131 31.955 32.0001 27.946 32.0001 23.001ZM2.85306 3.981C2.67506 3.955 2.41806 3.869 2.27406 3.743C2.13606 3.609 2.01706 3.5 2.00206 3C2.03506 2.354 2.19606 2.314 2.44906 2.144C2.57906 2.079 2.73806 2.037 2.85306 2.019C2.97006 1.997 3.00006 2.005 3.00206 1.999H22.0021V4H3.00206C3.00006 4 2.97006 4.002 2.85306 3.981ZM4.00006 30V6H24.0001V14.06C23.6711 14.023 23.3371 14 22.9981 14C20.8561 14 18.8921 14.751 17.3471 16H6.00006V18H15.5161C15.1031 18.616 14.7731 19.289 14.5211 20H6.00006V22H14.0571C14.0211 22.329 13.9981 22.662 13.9981 23.001C13.9981 25.83 15.3051 28.351 17.3461 30H4.00006ZM23.0001 30C19.1351 29.992 16.0061 26.865 16.0001 23.001C16.0061 19.136 19.1351 16.006 23.0001 16C26.8651 16.006 29.9921 19.136 30.0001 23.001C29.9921 26.865 26.8651 29.992 23.0001 30ZM22.0001 12H6.00006V14H22.0001V12Z" fill="#DADADA"/>
                         <path d="M26.144 22.001C26.152 21.87 26.158 21.734 26.158 21.592C26.152 20.914 26.07 20.101 25.602 19.334C25.145 18.555 24.164 17.974 23 18.001C21.835 17.974 20.852 18.555 20.395 19.334C19.925 20.101 19.843 20.914 19.839 21.592C19.839 21.735 19.845 21.87 19.853 22.001H19V27H27V22.001H26.144ZM21.837 21.592C21.833 21.114 21.93 20.634 22.091 20.394C22.264 20.167 22.361 20.029 23 20.001C23.637 20.028 23.73 20.165 23.904 20.394C24.066 20.634 24.163 21.117 24.157 21.592C24.157 21.737 24.149 21.872 24.138 22.001H21.856C21.846 21.87 21.837 21.733 21.837 21.592Z" fill="white"/>
                     </svg>
-                    <span className='w-full'>Terms and Policies</span>
+                    <span className='w-full flex'>Terms and Policies</span>
                     <svg className='w-2.5' viewBox="0 0 15 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M0.9375 2.77734L3.14551 0.5625L14.0625 11.5L3.14551 22.4375L0.9375 20.2227L9.63965 11.5L0.9375 2.77734Z" fill="#DADADA"/>
                     </svg>
-                </a>
+                </button>
             </div>
         </div>
 
@@ -100,12 +112,16 @@ const NavbarComponent: React.FC<NavbarComponentProps> = ({ isOpen, onClose }) =>
             </div>
         </div>
       </div>
+      </div>
 
       <div>
         <DisplayAddon isOpen={isNavbarOpenDisplay} onClose={handleCloseNavbar}></DisplayAddon>
       </div>
       <div>
         <AboutAddon isOpen={isNavbarOpenAbout} onClose={handleCloseNavbarAbout}></AboutAddon>
+      </div>
+      <div>
+        <TermsAddon isOpen={isNavbarOpenTerms} onClose={handleCloseNavbarTerms}></TermsAddon>
       </div>
     </div>
   );

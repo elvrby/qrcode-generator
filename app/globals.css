@@ -24,7 +24,6 @@ body {
 body.dark-theme {
   background-color: #000000; /* Dark mode background */
   color: #ffffff; /* Dark mode text color */
-  transition: background-color 0.3s ease;
 }
 body.dark-theme main{
   background-color: #000000; /* Dark mode background */
@@ -68,7 +67,6 @@ body.light-theme main{
 body.light-theme .navbar{
   background-color: #F3F3F3; /* Light mode background */
   color: #000000; /* Light mode text color */
-  transition: background-color 0.3s ease;
 }
 
 body.light-theme .ofill{

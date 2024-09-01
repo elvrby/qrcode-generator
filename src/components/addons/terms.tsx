@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import Cookies from 'js-cookie';
 
-interface AboutComponentProps {
+interface TermsComponentProps {
     isOpen: boolean;
     onClose: () => void;
 }
 
-const AboutAddon: React.FC<AboutComponentProps> = ({ isOpen, onClose }) => {
+const TermsAddon: React.FC<TermsComponentProps> = ({ isOpen, onClose }) => {
     const [theme, setTheme] = useState<'light' | 'dark'>('light');
 
     useEffect(() => {
@@ -21,19 +21,6 @@ const AboutAddon: React.FC<AboutComponentProps> = ({ isOpen, onClose }) => {
         }
     }, []);
 
-    const handleThemeChange = (newTheme: 'light' | 'dark') => {
-        setTheme(newTheme);
-        if (newTheme === 'light') {
-            document.body.classList.remove('dark-theme');
-            document.body.classList.add('light-theme');
-            Cookies.set('theme', 'light');
-        } else {
-            document.body.classList.remove('light-theme');
-            document.body.classList.add('dark-theme');
-            Cookies.set('theme', 'dark');
-        }
-    };
-
     return (
         <main className={`fixed top-0 right-0 w-full h-full transform lg:-96 ${isOpen ? 'translate-x-0' : 'translate-x-full'} transition-transform duration-300 ease-in-out`}>
             <div className='2xl:pl-96 2xl:pr-96'>
@@ -43,11 +30,11 @@ const AboutAddon: React.FC<AboutComponentProps> = ({ isOpen, onClose }) => {
                         <path d="M19.002 9.99999C19.002 10.5522 18.5547 11 18.002 11H3.8672L8.8301 18.4453C9.1367 18.9048 9.0127 19.5259 8.5528 19.832C8.3818 19.9458 8.1895 20 7.999 20C7.6758 20 7.3584 19.8437 7.166 19.5547L0.795898 9.99999L7.166 0.445287C7.4717 -0.0147127 8.0908 -0.139213 8.5527 0.167987C9.0127 0.474187 9.1367 1.09519 8.83 1.55469L3.8672 8.99999H18.002C18.5547 8.99999 19.002 9.44779 19.002 9.99999Z" />
                     </svg>
                 </button>
-                <span className='font-bold text-lg w-full ml-4'>About</span>
+                <span className='font-bold text-lg w-full ml-4'>Terms and Policies</span>
             </div>
             </div>
         </main>
     );
 }
 
-export default AboutAddon;
+export default TermsAddon;
