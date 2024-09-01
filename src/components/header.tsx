@@ -19,22 +19,25 @@ const HeaderCom: React.FC = () => {
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
 
   useEffect(() => {
-      // Cek cookie saat komponen dimuat untuk menetapkan tema
-      const storedTheme = Cookies.get('theme');
-      if (storedTheme === 'dark') {
-          setTheme('dark');
-          document.body.classList.add('dark-theme');
-      } else {
-          setTheme('light');
-          document.body.classList.add('light-theme');
-      }
+    const storedTheme = Cookies.get('theme');
+    if (storedTheme === 'dark') {
+      setTheme('dark');
+      document.body.classList.add('dark-theme');
+      document.body.classList.remove('light-theme');
+    } else {
+      setTheme('light');
+      document.body.classList.add('light-theme');
+      document.body.classList.remove('dark-theme');
+    }
   }, []);
+
+  
 
   return (
     <div>
       <main className="w-full flex items-center justify-between pl-6 pr-6 p-3 bg-white shadow-md 2xl:pl-80 2xl:pr-80">
         <div className="flex items-center">
-          <Image src="/qr-buddy.png" alt="qr-buddy" width={50} height={50} />
+          <Image src={`${theme === 'light' ? '/qr-buddy-light.png' : '/qr-buddy-dark.png'}?${new Date().getTime()}`} alt="qr-buddy" width={50} height={50} />
         </div>
         <div className="flex-1 text-center font-semibold text-lg">
           <h1>QR GENERATOR</h1>
