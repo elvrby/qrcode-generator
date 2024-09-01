@@ -1,6 +1,7 @@
 "use client"
 
-import { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import Cookies from 'js-cookie';
 import Image from 'next/image';
 import HeaderCom from '@/src/components/header';
 import FooterComponent from '@/src/components/footer';
@@ -20,8 +21,23 @@ export default function Home() {
     }
   };
 
+
+  const [theme, setTheme] = useState<'light' | 'dark'>('light');
+
+  useEffect(() => {
+      // Cek cookie saat komponen dimuat untuk menetapkan tema
+      const storedTheme = Cookies.get('theme');
+      if (storedTheme === 'dark') {
+          setTheme('dark');
+          document.body.classList.add('dark-theme');
+      } else {
+          setTheme('light');
+          document.body.classList.add('light-theme');
+      }
+  }, []);
+
   return (
-    <div className='bg-white h-screen text-black flex flex-col'>
+    <main className='bg-white h-screen flex flex-col'>
 
       <HeaderCom></HeaderCom>
 
@@ -35,11 +51,11 @@ export default function Home() {
             value={url}
             onChange={(e) => setUrl(e.target.value)}
             placeholder="Enter URL"
-            className='p-2 w-5/6 h-10 bg-[#f3f3f3] border border-[#dfdfdf] md:w-2/4'
+            className='p-2 w-5/6 h-10 border border-[#dfdfdf] md:w-2/4'
           />
           <span>This is what your QR code will link to.</span>
         </div>
-        <button onClick={generateQrCode} className='w-52 bg-slate-800 text-white p-2 rounded-md mt-4'>
+        <button onClick={generateQrCode} className='w-52 bg-[#4A4A4A] text-white p-2 rounded-md mt-4'>
           Generate
         </button>
 
@@ -66,6 +82,6 @@ export default function Home() {
       <div>
           <FooterComponent></FooterComponent>
       </div>
-    </div>
+    </main>
   );
 }

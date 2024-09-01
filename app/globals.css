@@ -18,13 +18,62 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: black;
 }
+
+body.dark-theme {
+  background-color: #000000; /* Dark mode background */
+  color: #ffffff; /* Dark mode text color */
+  transition: background-color 0.3s ease;
+}
+body.dark-theme main{
+  background-color: #000000; /* Dark mode background */
+  color: #ffffff; /* Dark mode text color */
+  transition: background-color 0.3s ease;
+}
+body.dark-theme .navbar{
+  background-color: #030303; /* Dark mode background */
+  color: #ffffff; /* Dark mode text color */
+}
+body.dark-theme input{
+  background: #4A4A4A;
+  border: #4A4A4A;
+}
+body.dark-theme .line{
+  border: #4A4A4A;
+  border-top: solid 1px #4A4A4A;
+}
+body.dark-theme .ofill{
+  fill: white;
+}
+
+/* Light theme */
+body.light-theme {
+  background-color: #F3F3F3; /* Light mode background */
+  color: #000000; /* Light mode text color */;
+}
+
+body.light-theme main{
+  background-color: #F3F3F3; /* Light mode background */
+  color: #000000; /* Light mode text color */
+  transition: background-color 0.3s ease;
+}
+body.light-theme .navbar{
+  background-color: #F3F3F3; /* Light mode background */
+  color: #000000; /* Light mode text color */
+  transition: background-color 0.3s ease;
+}
+
+body.light-theme .ofill{
+  fill: black;
+}
+body.light-theme input{
+  background: #f3f3f3;
+}
+body.light-theme .line{
+  border-top: solid 1px #dadada;
+}
+
 
 @layer utilities {
   .text-balance {
