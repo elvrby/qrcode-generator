@@ -21,19 +21,6 @@ const AboutAddon: React.FC<AboutComponentProps> = ({ isOpen, onClose }) => {
         }
     }, []);
 
-    const handleThemeChange = (newTheme: 'light' | 'dark') => {
-        setTheme(newTheme);
-        if (newTheme === 'light') {
-            document.body.classList.remove('dark-theme');
-            document.body.classList.add('light-theme');
-            Cookies.set('theme', 'light');
-        } else {
-            document.body.classList.remove('light-theme');
-            document.body.classList.add('dark-theme');
-            Cookies.set('theme', 'dark');
-        }
-    };
-
     return (
         <main className={`fixed top-0 right-0 w-full h-full transform lg:-96 ${isOpen ? 'translate-x-0' : 'translate-x-full'} transition-transform duration-300 ease-in-out`}>
             <div className='2xl:pl-96 2xl:pr-96'>

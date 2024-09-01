@@ -21,9 +21,9 @@ body {
   background-color: black;
 }
 
-body.dark-theme {
-  background-color: #000000; /* Dark mode background */
-  color: #ffffff; /* Dark mode text color */
+body.dark-theme .bgr{
+  background-color: #F3F3F3; /* Dark mode background */
+  color: black; /* Dark mode text color */
 }
 body.dark-theme main{
   background-color: #000000; /* Dark mode background */
@@ -54,9 +54,9 @@ body.dark-theme .bdown:hover{
 }
 
 /* Light theme */
-body.light-theme {
-  background-color: #F3F3F3; /* Light mode background */
-  color: #000000; /* Light mode text color */;
+body.light-theme .bgr{
+  background-color: black; /* Light mode background */
+  color: white; /* Light mode text color */;
 }
 
 body.light-theme main{
