@@ -23,7 +23,7 @@ export default function Home() {
   return (
     <div className='bg-white h-screen text-black flex flex-col'>
 
-        <HeaderCom></HeaderCom>
+      <HeaderCom></HeaderCom>
 
       <div className='flex-grow w-full flex justify-center'>
         <div className='mt-5 text-xl w-11/12 2xl:w-8/12'>
