@@ -46,6 +46,13 @@ body.dark-theme .line{
 body.dark-theme .ofill{
   fill: white;
 }
+body.dark-theme .bdown{
+  border: 2px solid #4A4A4A;
+}
+body.dark-theme .bdown:hover{
+  border: 2px solid #4A4A4A;
+  background: #4A4A4A;
+}
 
 /* Light theme */
 body.light-theme {
@@ -72,6 +79,14 @@ body.light-theme input{
 }
 body.light-theme .line{
   border-top: solid 1px #dadada;
+}
+body.light-theme .bdown{
+  border: 2px solid #4A4A4A;
+}
+body.light-theme .bdown:hover{
+  border: 2px solid #4A4A4A;
+  background: #4A4A4A;
+  color: white;
 }
 
 

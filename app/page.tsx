@@ -69,7 +69,7 @@ export default function Home() {
               <a 
                 href={qrCode} 
                 download="qr-code.png" 
-                className='w-52 border-2 border-slate-800 text-black p-2 rounded-md mt-4 block text-center text-base hover:bg-slate-800 hover:text-white'
+                className='w-52 border-2 p-2 rounded-md mt-4 block text-center text-base bdown'
               >
                 Download QR Code
               </a>
