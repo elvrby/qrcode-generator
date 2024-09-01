@@ -8,6 +8,7 @@ QR Code Generator built in Next.Js with Typescript
 * No Limit Generate
 * Lifetime Use
 * Support For Download The QR Code
+* Dark and Lightmode support
 * Easy To Use
 
 ## Tech 🛠
@@ -25,6 +26,12 @@ Here are the steps to run the project locally
 
 2. **Run Terminal**
    * Open Terminal
+   * Install node_moduls
+     ```bash
+     npm i node.js
+  
+3. **How to run**
+   * Open new terminal
    * Run `npm run dev`
    * After that open the link `localhost:3000`
 
