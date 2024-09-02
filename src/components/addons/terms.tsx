@@ -42,39 +42,42 @@ const TermsAddon: React.FC<TermsComponentProps> = ({ isOpen, onClose }) => {
                 </div>
 
                 <div className='bgr w-full h-full overflow-y-auto flex-wrap rounded-t-lg p-5'>
-                    <div className='mt-5 flex flex-col'>
-                        <em className='mb-4'>What information we collect</em>
-                        <em className='mb-4'>The security of your information</em>
-                    </div>
+            <div className='mt-5 flex flex-col'>
+                <em className='mb-4'>What information we collect</em>
+                <em className='mb-4'>The security of your information</em>
+            </div>
 
-                    <div className='mt-8'>
-                        <span>
-                            Welcome to Qr Code Generator, This Privacy Policy are committed
-                            to protecting and respecting your privacy, This Privacy Policy explains about our Policy
-                        </span>
-                    </div>
+            <div className='mt-8'>
+                <span>
+                    Welcome to Qr Code Generator, This Privacy Policy are committed
+                    to protecting and respecting your privacy, This Privacy Policy explains about our Policy
+                </span>
+            </div>
 
-                    <div className='mt-12'>
-                        <h1 className='font-bold text-3xl mb-2'>What information we collect</h1>
-                        <span>
-                        We may store some of your user data in cookies, so you can comfortably use darkmode and lightmode
-                        features without creating an account on our website
-                        </span>
-                    </div>
+            <div className='mt-12'>
+                <h1 className='font-bold text-3xl mb-2'>What information we collect</h1>
+                <span>
+                    We may store some of your user data in cookies, so you can comfortably use darkmode and lightmode
+                    features without creating an account on our website
+                </span>
+            </div>
 
-                    <div className='mt-12'>
-                        <h1 className='font-bold text-3xl mb-2'>The security of your information</h1>
-                        <span>
-                            We take steps to ensure that your information is treated securely and in accordance
-                            with this policy.
-                        </span>
-                    </div>
+            <div className='mt-12'>
+                <h1 className='font-bold text-3xl mb-2'>The security of your information</h1>
+                <span>
+                    We take steps to ensure that your information is treated securely and in accordance
+                    with this policy.
+                </span>
+            </div>
 
-                    <div className='mt-12'>
-
-                    </div>
-                                      
-                </div>
+            <div className='mt-12'>
+                <h1 className='font-bold text-3xl mb-2'>The security of your information</h1>
+                <span>
+                    We take steps to ensure that your information is treated securely and in accordance
+                    with this policy.
+                </span>
+            </div>
+        </div>
             </div>
         </main>
     );

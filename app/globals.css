@@ -24,6 +24,8 @@ body {
 body.dark-theme .bgr{
   background-color: #F3F3F3; /* Dark mode background */
   color: black; /* Dark mode text color */
+  overflow-y: auto; /* Atau scroll */
+  height: 100%;
 }
 body.dark-theme main{
   background-color: #000000; /* Dark mode background */
@@ -57,6 +59,8 @@ body.dark-theme .bdown:hover{
 body.light-theme .bgr{
   background-color: black; /* Light mode background */
   color: white; /* Light mode text color */;
+  overflow-y: auto; /* Atau scroll */
+    height: 100%;
 }
 
 body.light-theme main{
