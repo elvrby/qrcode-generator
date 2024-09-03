@@ -48,7 +48,7 @@ Optional:
 ## How To Use Simple Qr Generator with python 💻
 
 1. **Download Simple Qr Generator**
-   Download Simple Qr Generator in this repository
+   * Download Simple Qr Generator in this repository
 
 2. **Run The Program**
    * Open the `Simple Qr Generator`
