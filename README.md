@@ -16,8 +16,9 @@ QR Code Generator built in Next.Js with Typescript
 * Typescript
 * Tailwind
 * QR Code
+* Python
 
-## How To Use 💻
+## How To Use Qr Generator Web 💻
 Here are the steps to run the project locally
 
 1. **Clone the repository**
@@ -39,9 +40,22 @@ Here are the steps to run the project locally
 **And then it's finished and your project is ready to go 😊**
 
 Open in your browser for preview: localhost:3000
-
+     
 Optional:
 * If you have hosting you can set up to your hosting server for make it online
+  
+--------------------------------------------------------------------
+## How To Use Simple Qr Generator with python 💻
+
+1. **Download Simple Qr Generator**
+   Download Simple Qr Generator in this repository
+
+2. **Run The Program**
+   * Open the `Simple Qr Generator`
+   * Replace url with your url
+   * Run the program by click `run python file` or in terminal by
+     ````bash
+     python QrGenerator.py
 
 **Noted:**
-This project is free to use (not for commercial)
+All these projects in this repository is free to use (not for commercial)
