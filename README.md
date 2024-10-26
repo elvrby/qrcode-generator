@@ -3,6 +3,7 @@
 QR Code Generator built in Next.Js with Typescript
 
 ## Features ✨
+test
 * Open Source (Free to use)
 * Generate QR Code
 * No Limit Generate
